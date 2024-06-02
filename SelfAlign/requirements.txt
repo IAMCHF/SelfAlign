@@ -1,0 +1,18 @@
+# align 环境，需要cuda11.8以及对应的cudnn，conda环境要求python=3.8. 然后使用pip install tensorflow==2.12.0
+###### Requirements without Version Specifiers ######
+mrcfile
+scipy
+fire
+tqdm
+PyQt5
+###### Requirements with Version Specifiers ######
+scikit-image==0.17.2
+cython
+numpy
+scikit-learn
+matplotlib
+pypng
+keras
+lsm-db
+numba
+six
