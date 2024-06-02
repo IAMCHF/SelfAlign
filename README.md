@@ -49,7 +49,7 @@ python ./SelfAlign/bin/selfalign.py prepare_subtomo_star \
             --output_star 6A5L.star
 ```
 
-This command is used to generate an. star file, an example of which is as follows:
+This command is used to generate an .star file, an example of which is as follows:
 
 ```
 data_
@@ -60,9 +60,9 @@ _rlnImageName #2
 1 	/newdata3/chf/normalized/snr001/5T2C/5T2C.mrc
 ```
 
-You can also manually modify the. star file.
+You can also manually modify the .star file.
 
-After generating the corresponding. star file, the dataset for training the model and testing can be officially prepared. Taking 5LQW as an example:
+After generating the corresponding .star file, the dataset for training the model and testing can be officially prepared. Taking 5LQW as an example:
 
 ##### (1)prepare test data
 
@@ -85,7 +85,7 @@ with mrcfile.open("/HBV/Caohaofan/selfalign/mask_wedge_32.mrc", permissive=True)
     mask_wedge_32 = mrc.data.astype(np.float32)
 ```
 
-mask_widge.32. mrc has been placed in the SelfAlign folder, but it is not set as fixed because the corresponding mask_wedge may be different for different electron microscopy data and needs to be modified according to the actual situation.
+mask_widge_32.mrc has been placed in the SelfAlign folder, but it is not set as fixed because the corresponding mask_wedge may be different for different electron microscopy data and needs to be modified according to the actual situation.
 
 Afterwards, it is necessary to modify the *src_folder* and *dst_folder*. *src_folder* is the *rota* address in prepareutest5LQW.py and prepare_train5LQW.py, while *dst_folder* is a custom address.
 
@@ -136,7 +136,7 @@ You can use the annotated code in SelfAlign/reprocessing/snr. py to calculate *c
 
 View the specific implementation of *selfalign_loss* in SelfAlign/models/gumnet/tf_util_loss.py
 
-## 讨论
+## Discussions
 
 (1)SelfAlign provides a feasible approach for subtomo alignment by constructing a self supervised learning task, which can serve as the fundamental framework for using deep learning to achieve Subtomogram Alignment in the future. At the same time, SelfAlign is preparing to refer to the traditional field of multiple alignments and gradually refine the idea to construct a complete implementation of the  subtomogram averaging (STA). Currently, the average. py and refine. py in SelfAlign/bin are being modified and tested, and it is expected to achieve a complete STA in the future. Stay tuned……
 
